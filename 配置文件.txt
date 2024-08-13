@@ -89,14 +89,6 @@ proxy-providers:
       interval: 600
       url: http://www.gstatic.com/generate_204
 
-  - name: Proxies
-    type: select
-    use:
-      - 机场
-    proxies:
-      - AUTO
-      - DIRECT
-
 proxy-groups:
   - name: "前置代理组"
     type: select
@@ -105,14 +97,6 @@ proxy-groups:
       - 前置代理2
       - 前置代理3
       - 前置代理4
-
-- name: Proxies
-    type: select
-    use:
-      - 机场
-    proxies:
-      - AUTO
-      - DIRECT
 
   - name: Googleplay
     type: select
@@ -172,11 +156,14 @@ proxy-groups:
       - 哥伦比亚8
       - 哥伦比亚9
       - 哥伦比亚10
-    url: http://www.gstatic.com/generate_204
-    interval: 600
-    udp: false
 
-
+  - name: Proxies
+    type: select
+    use:
+      - 机场
+    proxies:
+      - AUTO
+      - DIRECT
 
 rules:
   - DOMAIN-SUFFIX,ipapi.co,Googleplay

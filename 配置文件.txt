@@ -29,15 +29,10 @@ proxies:
   - {name: "尼日7", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-viWJzb-sessiontime-10", password: "0QnkJq"}
   - {name: "尼日8", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-3mrxn-sessiontime-10", password: "0QnkJq"}
 
-proxy-providers:
-  机场: {type: "http", url: "https://xiaobajie.eyedoll.site/api/v1/client/subscribe?token=a38094e8e0e73641e64586a7817e2ac9", interval: 86400, path: "./proxy_provider/jc.yaml", udp: false, health-check: {enable: true, interval: 600, url: "http://www.gstatic.com/generate_204"}}
-
 proxy-groups:
   - {name: "前置代理组", type: "url-test", proxies: ["前置代理1", "前置代理2", "前置代理3", "前置代理4"], url: "http://www.gstatic.com/generate_204", interval: 300}
   - {name: "Googleplay", type: "select", proxies: ["Relay尼日1", "Relay尼日2", "Relay尼日3", "Relay尼日4", "Relay尼日5", "Relay尼日6", "Relay尼日7", "Relay尼日8"]}
-  - {name: "Proxies", type: "select", use: ["机场"], proxies: ["DIRECT"]}
-  
-  # 每个尼日节点的流量通过前置代理组转发
+
   - {name: "Relay尼日1", type: "relay", proxies: ["前置代理组", "尼日1"]}
   - {name: "Relay尼日2", type: "relay", proxies: ["前置代理组", "尼日2"]}
   - {name: "Relay尼日3", type: "relay", proxies: ["前置代理组", "尼日3"]}
@@ -46,7 +41,6 @@ proxy-groups:
   - {name: "Relay尼日6", type: "relay", proxies: ["前置代理组", "尼日6"]}
   - {name: "Relay尼日7", type: "relay", proxies: ["前置代理组", "尼日7"]}
   - {name: "Relay尼日8", type: "relay", proxies: ["前置代理组", "尼日8"]}
-
 rules:
   - DOMAIN-SUFFIX,ipapi.co,Googleplay
   - DOMAIN-SUFFIX,ip-api.com,Googleplay

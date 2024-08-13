@@ -34,21 +34,18 @@ proxy-providers:
 
 proxy-groups:
   - {name: "前置代理组", type: "url-test", proxies: ["前置代理1", "前置代理2", "前置代理3", "前置代理4"], url: "http://www.gstatic.com/generate_204", interval: 300}
-
-  - {name: "Googleplay", type: "select", proxies: ["尼日1", "尼日2", "尼日3", "尼日4", "尼日5", "尼日6", "尼日7", "尼日8"]}
-
-  - {name: "尼日1_relay", type: "relay", proxies: ["前置代理组", "尼日1"]}
-  - {name: "尼日2_relay", type: "relay", proxies: ["前置代理组", "尼日2"]}
-  - {name: "尼日3_relay", type: "relay", proxies: ["前置代理组", "尼日3"]}
-  - {name: "尼日4_relay", type: "relay", proxies: ["前置代理组", "尼日4"]}
-  - {name: "尼日5_relay", type: "relay", proxies: ["前置代理组", "尼日5"]}
-  - {name: "尼日6_relay", type: "relay", proxies: ["前置代理组", "尼日6"]}
-  - {name: "尼日7_relay", type: "relay", proxies: ["前置代理组", "尼日7"]}
-  - {name: "尼日8_relay", type: "relay", proxies: ["前置代理组", "尼日8"]}
-
+  - {name: "Googleplay", type: "select", proxies: ["Relay尼日1", "Relay尼日2", "Relay尼日3", "Relay尼日4", "Relay尼日5", "Relay尼日6", "Relay尼日7", "Relay尼日8"]}
   - {name: "Proxies", type: "select", use: ["机场"], proxies: ["DIRECT"]}
-
-  - {name: "Relay", type: "select", proxies: ["尼日1_relay", "尼日2_relay", "尼日3_relay", "尼日4_relay", "尼日5_relay", "尼日6_relay", "尼日7_relay", "尼日8_relay"]}
+  
+  # 每个尼日节点的流量通过前置代理组转发
+  - {name: "Relay尼日1", type: "relay", proxies: ["前置代理组", "尼日1"]}
+  - {name: "Relay尼日2", type: "relay", proxies: ["前置代理组", "尼日2"]}
+  - {name: "Relay尼日3", type: "relay", proxies: ["前置代理组", "尼日3"]}
+  - {name: "Relay尼日4", type: "relay", proxies: ["前置代理组", "尼日4"]}
+  - {name: "Relay尼日5", type: "relay", proxies: ["前置代理组", "尼日5"]}
+  - {name: "Relay尼日6", type: "relay", proxies: ["前置代理组", "尼日6"]}
+  - {name: "Relay尼日7", type: "relay", proxies: ["前置代理组", "尼日7"]}
+  - {name: "Relay尼日8", type: "relay", proxies: ["前置代理组", "尼日8"]}
 
 rules:
   - DOMAIN-SUFFIX,ipapi.co,Googleplay

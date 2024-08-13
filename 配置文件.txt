@@ -165,6 +165,7 @@ proxy-groups:
       - AUTO
       - DIRECT
 
+
 rules:
   - DOMAIN-SUFFIX,ipapi.co,Googleplay
   - DOMAIN-SUFFIX,ip-api.com,Googleplay

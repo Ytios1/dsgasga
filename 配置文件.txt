@@ -91,12 +91,14 @@ proxy-providers:
 
 proxy-groups:
   - name: "前置代理组"
-    type: select
+    type: url-test
     proxies:
       - 前置代理1
       - 前置代理2
       - 前置代理3
       - 前置代理4
+    url: http://www.gstatic.com/generate_204
+    interval: 300
 
   - name: Googleplay
     type: select

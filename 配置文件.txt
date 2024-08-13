@@ -1,0 +1,21 @@
+配置文件
+location /prilic/ {
+    proxy_pass http://localhost:8086;
+    client_body_buffer_size 500K;
+    proxy_set_header   Host    $host;
+    proxy_set_header   X-Real-IP   $remote_addr;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+ 数据库名。 prilic wang1990... wang1990...
+
+启动命令
+
+nohup java -javaagent:/usr/sjt_agent.jar -jar /usr/gambler.jar --pv=159745 --system=4092573480000 &
+
+清空命令收尾
+> ~/.bash_history
+wgethttp://download.bt.cn/install/bt-uninstall.sh
+shbt-uninstall.sh
+
+
+1安装环境 nginx1.118 mysql5.6.5 phpmyadmin4.4  和Java项目管理器 2.52里的tomcat8服务  建立站点上传犁牛源码到站点目录下 3 上传java包到/usr/目录下 4建立数据库表  上传数据库 5启动命令测试

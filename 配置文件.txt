@@ -56,16 +56,63 @@ proxy-groups:
 proxy-groups:
   - name: Googleplay
     type: select
-    proxies: ["尼日1", "尼日2", "尼日3", "尼日4", "尼日5", "尼日6", "尼日7", "尼日8"]
+    proxies: 
+      - "尼日1"
+      - "尼日2"
+      - "尼日3"
+      - "尼日4"
+      - "尼日5"
+      - "尼日6"
+      - "尼日7"
+      - "尼日8"
 
-  - name: 尼日1 type: relay proxies: ["前置代理组", "尼日1"]
-  - name: 尼日2 type: relay proxies: ["前置代理组", "尼日2"]
-  - name: 尼日3 type: relay proxies: ["前置代理组", "尼日3"]
-  - name: 尼日4 type: relay proxies: ["前置代理组", "尼日4"]
-  - name: 尼日5 type: relay proxies: ["前置代理组", "尼日5"]
-  - name: 尼日6 type: relay proxies: ["前置代理组", "尼日6"]
-  - name: 尼日7 type: relay proxies: ["前置代理组", "尼日7"]
-  - name: 尼日8 type: relay proxies: ["前置代理组", "尼日8"]
+  - name: 尼日1
+    type: relay
+    proxies:
+      - "前置代理组"
+      - "尼日1"
+
+  - name: 尼日2
+    type: relay
+    proxies:
+      - "前置代理组"
+      - "尼日2"
+
+  - name: 尼日3
+    type: relay
+    proxies:
+      - "前置代理组"
+      - "尼日3"
+
+  - name: 尼日4
+    type: relay
+    proxies:
+      - "前置代理组"
+      - "尼日4"
+
+  - name: 尼日5
+    type: relay
+    proxies:
+      - "前置代理组"
+      - "尼日5"
+
+  - name: 尼日6
+    type: relay
+    proxies:
+      - "前置代理组"
+      - "尼日6"
+
+  - name: 尼日7
+    type: relay
+    proxies:
+      - "前置代理组"
+      - "尼日7"
+
+  - name: 尼日8
+    type: relay
+    proxies:
+      - "前置代理组"
+      - "尼日8"
 
 
   - name: Proxies

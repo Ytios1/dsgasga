@@ -16,19 +16,19 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {name: 前置代理1, server: server1.example.com, port: 1080, type: socks5, username: user1, password: pass1}
-  - {name: 前置代理2, server: server2.example.com, port: 1080, type: socks5, username: user2, password: pass2}
-  - {name: 前置代理3, server: server3.example.com, port: 1080, type: socks5, username: user3, password: pass3}
-  - {name: 前置代理4, server: server4.example.com, port: 1080, type: socks5, username: user4, password: pass4}
+  - {name: "前置代理1", type: "ss", server: "gz.xn--1lqrb57uoq8a.com", port: 32022, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
+  - {name: "前置代理2", type: "ss", server: "gaosu.laotiehj6.top", port: 21642, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
+  - {name: "前置代理3", type: "ss", server: "gaosu.laotiehj6.top", port: 40779, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
+  - {name: "前置代理4", type: "ss", server: "gaosu.laotiehj6.top", port: 42503, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
   # 线路配置
-  - {name: 尼日1, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-NG-sessid-9UAJvr9x-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
-  - {name: 尼日2, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-NG-sessid-I1YiNFtI-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
-  - {name: 尼日3, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-NG-sessid-wEFC9qss-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
-  - {name: 尼日4, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-NG-sessid-Ld3Qh0dm-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
-  - {name: 尼日5, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-NG-sessid-dBzMSixq-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
-  - {name: 尼日6, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-NG-sessid-hh77lSeN-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
-  - {name: 尼日7, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-NG-sessid-wYvuTZCf-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
-  - {name: 尼日8, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-NG-sessid-9jDfJd04-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
+  - {name: 尼日1, server: asdata.lumidaili.com, port: 10000, type: socks5, username: userID-4442-orderid-10316-region-tr_adana-sessionID-78g7w-sessiontime-10, password: 0QnkJq, proxy: 前置代理组}
+  - {name: 尼日2, server: asdata.lumidaili.com, port: 10000, type: socks5, username: userID-4442-orderid-10316-region-tr_adana-sessionID-9-sessiontime-10, password: 0QnkJq, proxy: 前置代理组}
+  - {name: 尼日3, server: asdata.lumidaili.com, port: 10000, type: socks5, username: userID-4442-orderid-10316-region-tr_adana-sessionID-hpSS-sessiontime-10, password: 0QnkJq, proxy: 前置代理组}
+  - {name: 尼日4, server: asdata.lumidaili.com, port: 10000, type: socks5, username: userID-4442-orderid-10316-region-tr_adana-sessionID-oyUowX-sessiontime-10, password: 0QnkJq, proxy: 前置代理组}
+  - {name: 尼日5, server: asdata.lumidaili.com, port: 10000, type: socks5, username: userID-4442-orderid-10316-region-tr_adana-sessionID-f8G6-sessiontime-10, password: 0QnkJq, proxy: 前置代理组}
+  - {name: 尼日6, server: asdata.lumidaili.com, port: 10000, type: socks5, username: userID-4442-orderid-10316-region-tr_adana-sessionID-ZbJ5e-sessiontime-10, password: 0QnkJq, proxy: 前置代理组}
+  - {name: 尼日7, server: asdata.lumidaili.com, port: 10000, type: socks5, username: userID-4442-orderid-10316-region-tr_adana-sessionID-viWJzb-sessiontime-10, password: 0QnkJq, proxy: 前置代理组}
+  - {name: 尼日8, server: asdata.lumidaili.com, port: 10000, type: socks5, username: userID-4442-orderid-10316-region-tr_adana-sessionID-3mrxn-sessiontime-10, password: 0QnkJq, proxy: 前置代理组}
   - {name: 尼日9, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-NG-sessid-c0Axrybl-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
   - {name: 尼日10, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-NG-sessid-BSAofA4H-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
   - {name: 尼日11, server: 103.255.209.124, port: 18938, type: socks5, username: poiu4717, password: 9gHUDSv8OK_country-ng_session-mDZf3XLJ, proxy: 前置代理组}

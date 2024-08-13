@@ -1,21 +1,197 @@
-配置文件
-location /prilic/ {
-    proxy_pass http://localhost:8086;
-    client_body_buffer_size 500K;
-    proxy_set_header   Host    $host;
-    proxy_set_header   X-Real-IP   $remote_addr;
-    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
-  }
- 数据库名。 prilic wang1990... wang1990...
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+dns:
+  enabled: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+proxies:
+  # 前置代理
+  - {name: "🇭🇰 hk1", server: 47.76.162.143, port: 51371, type: vmess, uuid: e9e922a8-c5fc-4db4-ef69-b739ae8f084b, alterId: 0, cipher: auto, tls: false}
+  - {name: "🇭🇰 HK2", server: 47.76.143.179, port: 21862, type: vmess, uuid: ea51ab9b-5206-4e82-a228-7b8e05b7f4c5, alterId: 0, cipher: auto, tls: false}
 
-启动命令
+  # 尼日利亚线路通过香港节点中继
+  - {name: "尼日利亚01", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-ng-sessionID-aEJi4-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "尼日利亚02", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-ng-sessionID-mVO8-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "尼日利亚03", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-ng-sessionID-b4o3-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "尼日利亚04", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-ng-sessionID-i-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "尼日利亚05", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-ng-sessionID-x-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "尼日利亚06", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-ng-sessionID-mavX3-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "尼日利亚07", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-ng-sessionID-qWB8-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "尼日利亚08", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-ng-sessionID-0bUpm-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
 
-nohup java -javaagent:/usr/sjt_agent.jar -jar /usr/gambler.jar --pv=159745 --system=4092573480000 &
+  # 埃及线路通过香港节点中继
+  - {name: "埃及01", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-eg-sessionID-GxFvB-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "埃及02", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-eg-sessionID-mP-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "埃及03", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-eg-sessionID-j-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "埃及04", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-eg-sessionID-GCDLT-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "埃及05", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-eg-sessionID-TKtnC-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "埃及06", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-eg-sessionID-6UG-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "埃及07", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-eg-sessionID-S2-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "埃及08", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-eg-sessionID-KWJF-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
 
-清空命令收尾
-> ~/.bash_history
-wgethttp://download.bt.cn/install/bt-uninstall.sh
-shbt-uninstall.sh
+  # 缅甸线路通过香港节点中继
+  - {name: "缅甸01", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-mm-sessionID-CRSHd0-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "缅甸02", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-mm-sessionID-TVZF-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "缅甸03", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-mm-sessionID-d4-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "缅甸04", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-mm-sessionID-kR-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "缅甸05", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-mm-sessionID-a6-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "缅甸06", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-mm-sessionID-Ox-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "缅甸07", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-mm-sessionID-AsUn-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "缅甸08", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-mm-sessionID-TJPDK-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
 
+  # 土耳其线路通过香港节点中继
+  - {name: "土耳其01", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-tr_adana-sessionID-AOOk-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "土耳其02", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-tr_adana-sessionID-MG-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "土耳其03", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-tr_adana-sessionID-N3-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "土耳其04", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-tr_adana-sessionID-c-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "土耳其05", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-tr_adana-sessionID-1Jf-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "土耳其06", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-tr_adana-sessionID-dfL3A-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "土耳其07", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-tr_adana-sessionID-XaZQc-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "土耳其08", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-tr_adana-sessionID-oAX3-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
 
-1安装环境 nginx1.118 mysql5.6.5 phpmyadmin4.4  和Java项目管理器 2.52里的tomcat8服务  建立站点上传犁牛源码到站点目录下 3 上传java包到/usr/目录下 4建立数据库表  上传数据库 5启动命令测试
+  # 印度尼西亚线路通过香港节点中继
+  - {name: "印度尼西亚01", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-id-sessionID-cBfV-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "印度尼西亚02", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-id-sessionID-fi2a-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "印度尼西亚03", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-id-sessionID-laGzr-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "印度尼西亚04", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-id-sessionID-cq6oD-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "印度尼西亚05", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-id-sessionID-Zd1-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "印度尼西亚06", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-id-sessionID-8Id-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+  - {name: "印度尼西亚07", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-id-sessionID-Uqb5-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
+  - {name: "印度尼西亚08", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-id-sessionID-ZYPXI-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
+
+proxy-groups:
+  - name: Googleplay
+    type: select
+    proxies:
+
+      - 尼日利亚01
+      - 尼日利亚02
+      - 尼日利亚03
+      - 尼日利亚04
+      - 尼日利亚05
+      - 尼日利亚06
+      - 尼日利亚07
+      - 尼日利亚08
+
+      - 埃及01
+      - 埃及02
+      - 埃及03
+      - 埃及04
+      - 埃及05
+      - 埃及06
+      - 埃及07
+      - 埃及08
+
+      - 缅甸01
+      - 缅甸02
+      - 缅甸03
+      - 缅甸04
+      - 缅甸05
+      - 缅甸06
+      - 缅甸07
+      - 缅甸08
+
+      - 土耳其01
+      - 土耳其02
+      - 土耳其03
+      - 土耳其04
+      - 土耳其05
+      - 土耳其06
+      - 土耳其07
+      - 土耳其08
+
+      - 印度尼西亚01
+      - 印度尼西亚02
+      - 印度尼西亚03
+      - 印度尼西亚04
+      - 印度尼西亚05
+      - 印度尼西亚06
+      - 印度尼西亚07
+      - 印度尼西亚08
+
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    udp: false
+
+  - name: Proxies
+    type: select
+    proxies:
+      - 🇭🇰 hk1
+      - 🇭🇰 HK2
+    use:
+      - 机场
+
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    udp: false
+
+rules:
+  - DOMAIN-SUFFIX,ipapi.co,Googleplay
+  - DOMAIN-SUFFIX,ip-api.com,Googleplay
+  - DOMAIN-SUFFIX,api.ip.sb,Googleplay
+  - DOMAIN-SUFFIX,IPInfo.io,Googleplay
+  - DOMAIN-SUFFIX,ipip.net,Googleplay
+  - DOMAIN-SUFFIX,skk.moe,Googleplay
+  - DOMAIN-KEYWORD,game,Proxies
+  - DOMAIN-KEYWORD,gvt1,Proxies
+  - DOMAIN-KEYWORD,googlevideo.com,Proxies
+  - DOMAIN-KEYWORD,lra8j.com,DIRECT
+  - DOMAIN-KEYWORD,cn,DIRECT
+  - DOMAIN,play-fe.googleapis.com,Googleplay
+  - IP-CIDR,172.217.160.110/32,Googleplay
+  - IP-CIDR,172.217.163.46/32,Googleplay
+  - IP-CIDR,172.217.160.78/32,Googleplay
+  - IP-CIDR,142.251.42.238/32,Googleplay
+  - IP-CIDR,142.251.43.14/32,Googleplay
+  - IP-CIDR,142.251.220.77/32,Googleplay
+  - IP-CIDR,142.251.42.237/32,Googleplay
+  - IP-CIDR,172.217.163.45/32,Googleplay
+  - IP-CIDR,142.250.204.78/32,Googleplay
+  - IP-CIDR,142.250.66.142/32,Googleplay
+  - DOMAIN-SUFFIX,1password.com,DIRECT
+  - DOMAIN-SUFFIX,vultr.com,DIRECT
+  - DOMAIN-SUFFIX,mb3admin.com,DIRECT
+  - DOMAIN-SUFFIX,rixcloud.io,DIRECT
+  - DOMAIN-SUFFIX,tempestapp.io,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,baidu-int.com,DIRECT
+  - DOMAIN-SUFFIX,erebor.douban.com,DIRECT
+  - DOMAIN,mtalk.google.com,DIRECT
+  - DOMAIN,alt1-mtalk.google.com,DIRECT
+  - DOMAIN,alt2-mtalk.google.com,DIRECT
+  - DOMAIN,alt3-mtalk.google.com,DIRECT
+  - DOMAIN,alt4-mtalk.google.com,DIRECT
+  - DOMAIN,alt5-mtalk.google.com,DIRECT
+  - DOMAIN,alt6-mtalk.google.com,DIRECT
+  - DOMAIN,alt7-mtalk.google.com,DIRECT
+  - DOMAIN,alt8-mtalk.google.com,DIRECT
+  - DOMAIN,alt9-mtalk.google.com,DIRECT
+  - DOMAIN,captive.apple.com,DIRECT
+  - DOMAIN,time-ios.apple.com,DIRECT
+  - DOMAIN-SUFFIX,gateway.push-apple.com.akadns.net,DIRECT
+  - DOMAIN-SUFFIX,push.apple.com,DIRECT
+  - DOMAIN-KEYWORD,github,Proxies
+  - DOMAIN-SUFFIX,github.com,Proxies
+  - DOMAIN-SUFFIX,github.io,Proxies
+  - DOMAIN-SUFFIX,githubapp.com,Proxies
+  - DOMAIN-SUFFIX,githubassets.com,Proxies
+  - DOMAIN-SUFFIX,githubusercontent.com,Proxies
+  - DOMAIN-SUFFIX,home-intl.console.aliyun.com,Proxies
+  - DOMAIN-SUFFIX,googleapis.cn,Proxies
+  - DOMAIN-SUFFIX,maying.co,Proxies
+  - DOMAIN-SUFFIX,flowercloud.net,Proxies
+  - DOMAIN-SUFFIX,socloud.me,Proxies
+  - DOMAIN-SUFFIX,ytoo.asia,Proxies
+  - DOMAIN-SUFFIX,ytoo.co.uk,Proxies
+  - GEOIP,CN,DIRECT
+  - MATCH,Proxies

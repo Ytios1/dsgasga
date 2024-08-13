@@ -162,7 +162,6 @@ proxy-groups:
     use:
       - 机场
     proxies:
-      - AUTO
       - DIRECT
 
 

@@ -20,16 +20,6 @@ proxies:
   - {name: 前置代理2, server: server2.example.com, port: 1080, type: socks5, username: user2, password: pass2}
   - {name: 前置代理3, server: server3.example.com, port: 1080, type: socks5, username: user3, password: pass3}
   - {name: 前置代理4, server: server4.example.com, port: 1080, type: socks5, username: user4, password: pass4}
-
-proxy-groups:
-  - name: "前置代理组"
-    type: select
-    proxies:
-      - 前置代理1
-      - 前置代理2
-      - 前置代理3
-      - 前置代理4
-
   # 线路配置
   - {name: 尼日1, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-NG-sessid-9UAJvr9x-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
   - {name: 尼日2, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-NG-sessid-I1YiNFtI-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
@@ -86,6 +76,16 @@ proxy-groups:
   - {name: 哥伦比亚8, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-CO-sessid-KmNpXr8H-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
   - {name: 哥伦比亚9, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-CO-sessid-ZnOpYr7Q-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
   - {name: 哥伦比亚10, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-CO-sessid-VmQpXq4T-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
+
+proxy-groups:
+  - name: "前置代理组"
+    type: select
+    proxies:
+      - 前置代理1
+      - 前置代理2
+      - 前置代理3
+      - 前置代理4
+
   - name: Googleplay
     type: select
     proxies:
@@ -148,17 +148,6 @@ proxy-groups:
     interval: 600
     udp: false
 
-  - name: Proxies
-    type: select
-    proxies:
-      - 🇭🇰 hk1
-      - 🇭🇰 HK2
-    use:
-      - 机场
-    url: http://www.gstatic.com/generate_204
-    interval: 600
-    udp: false
-
 proxy-providers:
   机场:
     type: http
@@ -178,9 +167,9 @@ rules:
   - DOMAIN-SUFFIX,IPInfo.io,Googleplay
   - DOMAIN-SUFFIX,ipip.net,Googleplay
   - DOMAIN-SUFFIX,skk.moe,Googleplay
-  - DOMAIN-KEYWORD,game,Proxies
-  - DOMAIN-KEYWORD,gvt1,Proxies
-  - DOMAIN-KEYWORD,googlevideo.com,Proxies
+  - DOMAIN-KEYWORD,game,Googleplay
+  - DOMAIN-KEYWORD,gvt1,Googleplay
+  - DOMAIN-KEYWORD,googlevideo.com,Googleplay
   - DOMAIN-KEYWORD,lra8j.com,DIRECT
   - DOMAIN-KEYWORD,cn,DIRECT
   - DOMAIN,play-fe.googleapis.com,Googleplay
@@ -216,18 +205,18 @@ rules:
   - DOMAIN,time-ios.apple.com,DIRECT
   - DOMAIN-SUFFIX,gateway.push-apple.com.akadns.net,DIRECT
   - DOMAIN-SUFFIX,push.apple.com,DIRECT
-  - DOMAIN-KEYWORD,github,Proxies
-  - DOMAIN-SUFFIX,github.com,Proxies
-  - DOMAIN-SUFFIX,github.io,Proxies
-  - DOMAIN-SUFFIX,githubapp.com,Proxies
-  - DOMAIN-SUFFIX,githubassets.com,Proxies
-  - DOMAIN-SUFFIX,githubusercontent.com,Proxies
-  - DOMAIN-SUFFIX,home-intl.console.aliyun.com,Proxies
-  - DOMAIN-SUFFIX,googleapis.cn,Proxies
-  - DOMAIN-SUFFIX,maying.co,Proxies
-  - DOMAIN-SUFFIX,flowercloud.net,Proxies
-  - DOMAIN-SUFFIX,socloud.me,Proxies
-  - DOMAIN-SUFFIX,ytoo.asia,Proxies
-  - DOMAIN-SUFFIX,ytoo.co.uk,Proxies
+  - DOMAIN-KEYWORD,github,Googleplay
+  - DOMAIN-SUFFIX,github.com,Googleplay
+  - DOMAIN-SUFFIX,github.io,Googleplay
+  - DOMAIN-SUFFIX,githubapp.com,Googleplay
+  - DOMAIN-SUFFIX,githubassets.com,Googleplay
+  - DOMAIN-SUFFIX,githubusercontent.com,Googleplay
+  - DOMAIN-SUFFIX,home-intl.console.aliyun.com,Googleplay
+  - DOMAIN-SUFFIX,googleapis.cn,Googleplay
+  - DOMAIN-SUFFIX,maying.co,Googleplay
+  - DOMAIN-SUFFIX,flowercloud.net,Googleplay
+  - DOMAIN-SUFFIX,socloud.me,Googleplay
+  - DOMAIN-SUFFIX,ytoo.asia,Googleplay
+  - DOMAIN-SUFFIX,ytoo.co.uk,Googleplay
   - GEOIP,CN,DIRECT
-  - MATCH,Proxies
+  - MATCH,Googleplay

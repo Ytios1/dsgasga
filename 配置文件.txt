@@ -34,13 +34,9 @@ proxy-providers:
 
 proxy-groups:
   - {name: "前置代理组", type: "url-test", proxies: ["前置代理1", "前置代理2", "前置代理3", "前置代理4"], url: "http://www.gstatic.com/generate_204", interval: 300}
-
   - {name: "Googleplay", type: "select", proxies: ["尼日1", "尼日2", "尼日3", "尼日4", "尼日5", "尼日6", "尼日7", "尼日8"]}
-
   - {name: "Proxies", type: "select", use: ["机场"], proxies: ["DIRECT"]}
-
   - {name: "Relay", type: "relay", proxies: ["前置代理组", "Googleplay"]}
-
 
 rules:
   - DOMAIN-SUFFIX,ipapi.co,Googleplay

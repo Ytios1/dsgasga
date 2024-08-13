@@ -89,7 +89,7 @@ proxy-providers:
       interval: 600
       url: http://www.gstatic.com/generate_204
 
-- name: Proxies
+  - name: Proxies
     type: select
     use:
       - 机场

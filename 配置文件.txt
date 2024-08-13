@@ -21,104 +21,35 @@ proxies:
   - {name: "前置代理3", type: "ss", server: "gaosu.laotiehj6.top", port: 40779, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
   - {name: "前置代理4", type: "ss", server: "gaosu.laotiehj6.top", port: 42503, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
   # 线路配置
-  - {name: "尼日1", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-78g7w-sessiontime-10", password: "0QnkJq", proxy: "前置代理组"}
-  - {name: "尼日2", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-9-sessiontime-10", password: "0QnkJq", proxy: "前置代理组"}
-  - {name: "尼日3", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-hpSS-sessiontime-10", password: "0QnkJq", proxy: "前置代理组"}
-  - {name: "尼日4", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-oyUowX-sessiontime-10", password: "0QnkJq", proxy: "前置代理组"}
-  - {name: "尼日5", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-f8G6-sessiontime-10", password: "0QnkJq", proxy: "前置代理组"}
-  - {name: "尼日6", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-ZbJ5e-sessiontime-10", password: "0QnkJq", proxy: "前置代理组"}
-  - {name: "尼日7", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-viWJzb-sessiontime-10", password: "0QnkJq", proxy: "前置代理组"}
-  - {name: "尼日8", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-3mrxn-sessiontime-10", password: "0QnkJq", proxy: "前置代理组"}
+  - {name: "尼日1", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-78g7w-sessiontime-10", password: "0QnkJq"}
+  - {name: "尼日2", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-9-sessiontime-10", password: "0QnkJq"}
+  - {name: "尼日3", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-hpSS-sessiontime-10", password: "0QnkJq"}
+  - {name: "尼日4", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-oyUowX-sessiontime-10", password: "0QnkJq"}
+  - {name: "尼日5", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-f8G6-sessiontime-10", password: "0QnkJq"}
+  - {name: "尼日6", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-ZbJ5e-sessiontime-10", password: "0QnkJq"}
+  - {name: "尼日7", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-viWJzb-sessiontime-10", password: "0QnkJq"}
+  - {name: "尼日8", server: "asdata.lumidaili.com", port: 10000, type: "socks5", username: "userID-4442-orderid-10316-region-tr_adana-sessionID-3mrxn-sessiontime-10", password: "0QnkJq"}
+
 
 proxy-providers:
-  机场:
-    type: http
-    url: https://51tu.lol/Ff6eAe
-    interval: 86400
-    path: ./proxy_provider/jc.yaml
-    udp: false
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204
+  机场: {type: "http", url: "https://xiaobajie.eyedoll.site/api/v1/client/subscribe?token=a38094e8e0e73641e64586a7817e2ac9", interval: 86400, path: "./proxy_provider/jc.yaml", udp: false, health-check: {enable: true, interval: 600, url: "http://www.gstatic.com/generate_204"}}
 
 proxy-groups:
-  - name: "前置代理组"
-    type: url-test
-    proxies:
-      - 前置代理1
-      - 前置代理2
-      - 前置代理3
-      - 前置代理4
-    url: http://www.gstatic.com/generate_204
-    interval: 300
+  - {name: "前置代理组", type: "url-test", proxies: ["前置代理1", "前置代理2", "前置代理3", "前置代理4"], url: "http://www.gstatic.com/generate_204", interval: 300}
 
-proxy-groups:
-  - name: Googleplay
-    type: select
-    proxies: 
-      - "尼日1"
-      - "尼日2"
-      - "尼日3"
-      - "尼日4"
-      - "尼日5"
-      - "尼日6"
-      - "尼日7"
-      - "尼日8"
+  - {name: "Googleplay", type: "select", proxies: ["尼日1", "尼日2", "尼日3", "尼日4", "尼日5", "尼日6", "尼日7", "尼日8"]}
 
-  - name: 尼日1
-    type: relay
-    proxies:
-      - "前置代理组"
-      - "尼日1"
+  - {name: "尼日1", type: "relay", proxies: ["前置代理组", "尼日1"]}
+  - {name: "尼日2", type: "relay", proxies: ["前置代理组", "尼日2"]}
+  - {name: "尼日3", type: "relay", proxies: ["前置代理组", "尼日3"]}
+  - {name: "尼日4", type: "relay", proxies: ["前置代理组", "尼日4"]}
+  - {name: "尼日5", type: "relay", proxies: ["前置代理组", "尼日5"]}
+  - {name: "尼日6", type: "relay", proxies: ["前置代理组", "尼日6"]}
+  - {name: "尼日7", type: "relay", proxies: ["前置代理组", "尼日7"]}
+  - {name: "尼日8", type: "relay", proxies: ["前置代理组", "尼日8"]}
 
-  - name: 尼日2
-    type: relay
-    proxies:
-      - "前置代理组"
-      - "尼日2"
+  - {name: "Proxies", type: "select", use: ["机场"], proxies: ["DIRECT"]}
 
-  - name: 尼日3
-    type: relay
-    proxies:
-      - "前置代理组"
-      - "尼日3"
-
-  - name: 尼日4
-    type: relay
-    proxies:
-      - "前置代理组"
-      - "尼日4"
-
-  - name: 尼日5
-    type: relay
-    proxies:
-      - "前置代理组"
-      - "尼日5"
-
-  - name: 尼日6
-    type: relay
-    proxies:
-      - "前置代理组"
-      - "尼日6"
-
-  - name: 尼日7
-    type: relay
-    proxies:
-      - "前置代理组"
-      - "尼日7"
-
-  - name: 尼日8
-    type: relay
-    proxies:
-      - "前置代理组"
-      - "尼日8"
-
-
-  - name: Proxies
-    type: select
-    use: ["机场"]
-    proxies: ["DIRECT"]
 
 
 rules:

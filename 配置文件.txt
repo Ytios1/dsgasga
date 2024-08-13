@@ -16,7 +16,6 @@ dns:
     - tls://dns.google:853
 proxies:
   # 前置代理
-  - {name: "🇭🇰 hk1", server: 47.76.162.143, port: 51371, type: vmess, uuid: e9e922a8-c5fc-4db4-ef69-b739ae8f084b, alterId: 0, cipher: auto, tls: false}
   - {name: "🇭🇰 HK2", server: 47.76.143.179, port: 21862, type: vmess, uuid: ea51ab9b-5206-4e82-a228-7b8e05b7f4c5, alterId: 0, cipher: auto, tls: false}
 
   # 尼日利亚线路通过香港节点中继
@@ -69,7 +68,6 @@ proxies:
   - {name: "印度尼西亚07", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-id-sessionID-Uqb5-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 hk1"}
   - {name: "印度尼西亚08", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4327-orderid-9995-region-id-sessionID-ZYPXI-sessiontime-5", password: "Aa112211", udp: true, relay: "🇭🇰 HK2"}
 
-          机场:
             type: http
             url: https://xiaobajie.eyedoll.site/api/v1/client/subscribe?token=46c54f601cf84282f6698f2dce1481a6
             interval: 86400

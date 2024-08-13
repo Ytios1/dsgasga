@@ -106,6 +106,14 @@ proxy-groups:
       - 前置代理3
       - 前置代理4
 
+- name: Proxies
+    type: select
+    use:
+      - 机场
+    proxies:
+      - AUTO
+      - DIRECT
+
   - name: Googleplay
     type: select
     proxies:

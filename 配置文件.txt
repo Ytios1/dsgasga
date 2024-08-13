@@ -77,6 +77,26 @@ proxies:
   - {name: 哥伦比亚9, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-CO-sessid-ZnOpYr7Q-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
   - {name: 哥伦比亚10, server: 103.255.209.124, port: 8102, type: socks5, username: 47353961-zone-custom-region-CO-sessid-VmQpXq4T-sessTime-15, password: dJIA8BM3, proxy: 前置代理组}
 
+proxy-providers:
+  机场:
+    type: http
+    url: https://51tu.lol/Ff6eAe
+    interval: 86400
+    path: ./proxy_provider/jc.yaml
+    udp: false
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  - name: Proxies
+    type: select
+    use:
+      - 机场
+    proxies:
+      - AUTO
+      - DIRECT
+
 proxy-groups:
   - name: "前置代理组"
     type: select
@@ -148,17 +168,7 @@ proxy-groups:
     interval: 600
     udp: false
 
-proxy-providers:
-  机场:
-    type: http
-    url: https://51tu.lol/Ff6eAe
-    interval: 86400
-    path: ./proxy_provider/jc.yaml
-    udp: false
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204
+
 
 rules:
   - DOMAIN-SUFFIX,ipapi.co,Googleplay

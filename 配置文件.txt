@@ -21,14 +21,14 @@ proxies:
   - {name: "专线-Frontend-1", type: "ss", server: "gaosu.laotiehj6.top", port: 21642, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
   - {name: "专线-Frontend-2", type: "ss", server: "gaosu.laotiehj6.top", port: 40779, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
   - {name: "专线-Frontend-3", type: "ss", server: "gaosu.laotiehj6.top", port: 42503, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
-  - {name: "尼日利亚01", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-cnq-sessiontime-10", password: "Aa11223344", udp: true}
-  - {name: "尼日利亚02", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-kcE13y-sessiontime-10", password: "Aa11223344", udp: true}
-  - {name: "尼日利亚03", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-Id4ubA-sessiontime-10", password: "Aa11223344", udp: true}
-  - {name: "尼日利亚04", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-ZE5-sessiontime-10", password: "Aa11223344", udp: true}
-  - {name: "尼日利亚05", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-p4-sessiontime-10", password: "Aa11223344", udp: true}
-  - {name: "尼日利亚06", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-2-sessiontime-10", password: "Aa11223344", udp: true}
-  - {name: "尼日利亚07", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-5P-sessiontime-10", password: "Aa11223344", udp: true}
-  - {name: "尼日利亚08", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-ephz-sessiontime-10", password: "Aa11223344", udp: true}
+  - {name: "尼日利亚01", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-cnq-sessiontime-15", password: "Aa11223344", udp: true}
+  - {name: "尼日利亚02", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-kcE13y-sessiontime-15", password: "Aa11223344", udp: true}
+  - {name: "尼日利亚03", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-Id4ubA-sessiontime-15", password: "Aa11223344", udp: true}
+  - {name: "尼日利亚04", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-ZE5-sessiontime-15", password: "Aa11223344", udp: true}
+  - {name: "尼日利亚05", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-p4-sessiontime-15", password: "Aa11223344", udp: true}
+  - {name: "尼日利亚06", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-2-sessiontime-15", password: "Aa11223344", udp: true}
+  - {name: "尼日利亚07", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-5P-sessiontime-15", password: "Aa11223344", udp: true}
+  - {name: "尼日利亚08", type: "socks5", server: "156.59.15.198", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-ephz-sessiontime-15", password: "Aa11223344", udp: true}
 
 proxy-providers:
   主线路: {type: "http", url: "https://xiaobajie.eyedoll.site/api/v1/client/subscribe?token=46c54f601cf84282f6698f2dce1481a6", interval: 86400, path: "./proxy_provider/jc.yaml", udp: false, health-check: {enable: true, interval: 600, url: "http://www.gstatic.com/generate_204"}}

@@ -21,7 +21,6 @@ proxies:
   - {name: "专线-Frontend-1", type: "ss", server: "gaosu.laotiehj6.top", port: 10059, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
   - {name: "专线-Frontend-2", type: "ss", server: "gaosu.laotiehj6.top", port: 21642, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
   - {name: "专线-Frontend-3", type: "ss", server: "gaosu.laotiehj6.top", port: 40779, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
-  - {name: "专线-Frontend-4", type: "vmess", server: "tongyu.lt1122.com", port: 19333, uuid: "906e4d3f-3185-4c23-8464-23cee0da33c3", alterId: 0, cipher: "auto", network: "tcp"}
 
   - {name: "尼日利亚01", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-cnq-sessiontime-15", password: "Aa11223344", udp: true}
   - {name: "尼日利亚02", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-kcE13y-sessiontime-15", password: "Aa11223344", udp: true}
@@ -42,7 +41,7 @@ proxy-providers:
 proxy-groups:
   - {name: "主线路", type: "select", use: ["主线路"], health-check: {enable: true, interval: 120, url: "http://www.gstatic.com/generate_204"}}
   - {name: "消费", type: "select", proxies: [ "专线-尼日利亚01", "专线-尼日利亚02", "专线-尼日利亚03", "专线-尼日利亚04", "专线-尼日利亚05", "专线-尼日利亚06", "专线-尼日利亚07", "专线-尼日利亚08", "专线-尼日利亚09", "专线-尼日利亚10", "专线-尼日利亚11", "专线-尼日利亚12"]}
-  - {name: "自动切换", type: "fallback", url: "http://www.gstatic.com/generate_204", interval: 300, proxies: ["专线-Frontend", "专线-Frontend-1", "专线-Frontend-2", "专线-Frontend-3", "专线-Frontend-4"]}
+  - {name: "自动切换", type: "fallback", url: "http://www.gstatic.com/generate_204", interval: 300, proxies: ["专线-Frontend", "专线-Frontend-1", "专线-Frontend-2", "专线-Frontend-3"]}
   - {name: "专线-尼日利亚01", type: "relay", proxies: ["自动切换", "尼日利亚01"]}
   - {name: "专线-尼日利亚02", type: "relay", proxies: ["自动切换", "尼日利亚02"]}
   - {name: "专线-尼日利亚03", type: "relay", proxies: ["自动切换", "尼日利亚03"]}

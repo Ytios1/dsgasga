@@ -19,8 +19,8 @@ dns:
 proxies:
   - {name: "专线-Frontend", type: "ss", server: "gz.xn--1lqrb57uoq8a.com", port: 32022, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
   - {name: "专线-Frontend-1", type: "ss", server: "gaosu.laotiehj6.top", port: 21642, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
-  - {name: "专线-Frontend-2", type: "ss", server: "gaosu.laotiehj6.top", port: 40779, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
-  - {name: "专线-Frontend-3", type: "ss", server: "gaosu.laotiehj6.top", port: 42503, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
+  - {name: "专线-Frontend-2", type: "vmess", server: "ipelhk.51feitu.com", port: 11001, uuid: "2f5100a9-a7c8-4cbc-9b3e-bed3ed3611c8", alterId: 0, cipher: "chacha20-ietf-poly1305", network: "tcp"}
+  - {name: "专线-Frontend-3", type: "vmess", server: "sg01.51feitu.com", port: 12001, uuid: "2f5100a9-a7c8-4cbc-9b3e-bed3ed3611c8", alterId: 0, cipher: "chacha20-ietf-poly1305", network: "tcp"}
   - {name: "专线-Frontend-4", type: "vmess", server: "tongyu.lt1122.com", port: 19333, uuid: "906e4d3f-3185-4c23-8464-23cee0da33c3", alterId: 0, cipher: "auto", network: "tcp"}
   - {name: "尼日利亚01", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-cnq-sessiontime-15", password: "Aa11223344", udp: true}
   - {name: "尼日利亚02", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-kcE13y-sessiontime-15", password: "Aa11223344", udp: true}
@@ -36,12 +36,12 @@ proxies:
   - {name: "尼日利亚12", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4442-orderid-11079-region-ng_lagos-sessionID-gI-sessiontime-15", password: "Aa11223344", udp: true}
 
 proxy-providers:
-  主线路: {type: "http", url: "https://xiaobajie.eyedoll.site/api/v1/client/subscribe?token=46c54f601cf84282f6698f2dce1481a6", interval: 86400, path: "./proxy_provider/jc.yaml", udp: false, health-check: {enable: true, interval: 600, url: "http://www.gstatic.com/generate_204"}}
+  主线路: {type: "http", url: "https://51tu.lol/Ff6eAe", interval: 86400, path: "./proxy_provider/jc.yaml", udp: false, health-check: {enable: true, interval: 600, url: "http://www.gstatic.com/generate_204"}}
 
 proxy-groups:
   - {name: "主线路", type: "select", use: ["主线路"], health-check: {enable: true, interval: 120, url: "http://www.gstatic.com/generate_204"}}
   - {name: "消费", type: "select", proxies: [ "专线-尼日利亚01", "专线-尼日利亚02", "专线-尼日利亚03", "专线-尼日利亚04", "专线-尼日利亚05", "专线-尼日利亚06", "专线-尼日利亚07", "专线-尼日利亚08", "专线-尼日利亚09", "专线-尼日利亚10", "专线-尼日利亚11", "专线-尼日利亚12"]}
-  - {name: "自动切换", type: "fallback", url: "http://www.gstatic.com/generate_204", interval: 300, proxies: ["专线-Frontend", "专线-Frontend-1", "专线-Frontend-2", "专线-Frontend-3", "专线-Frontend-4"]}
+  - {name: "自动切换", type: "fallback", url: "http://www.gstatic.com/generate_204", interval: 300, proxies: ["专线-Frontend", "专线-Frontend-1", "专线-Frontend-2", "专线-Frontend-3"]}
   - {name: "专线-尼日利亚01", type: "relay", proxies: ["自动切换", "尼日利亚01"]}
   - {name: "专线-尼日利亚02", type: "relay", proxies: ["自动切换", "尼日利亚02"]}
   - {name: "专线-尼日利亚03", type: "relay", proxies: ["自动切换", "尼日利亚03"]}
@@ -60,7 +60,7 @@ rules:
   - DOMAIN,payments.google.com,消费
   - DOMAIN-SUFFIX,payments-pa.googleapis.com,消费
   - DOMAIN,play-fe.googleapis.com,消费
-  - DOMAIN-SUFFIX,gvt1.com,主线路
+  - DOMAIN-SUFFIX,gvt1.com,消费
 
   # 针对Google相关服务的规则
   - DOMAIN,myaccount.google.com,主线路
@@ -129,4 +129,3 @@ rules:
   # 其他匹配规则
   - GEOIP,CN,DIRECT
   - MATCH,主线路
-

@@ -20,7 +20,7 @@ proxies:
   - {name: "专线-Frontend", type: "ss", server: "gz.xn--1lqrb57uoq8a.com", port: 32022, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
   - {name: "专线-Frontend-1", type: "ss", server: "gz.xn--1lqrb57uoq8a.com", port: 18239, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
   - {name: "专线-Frontend-2", type: "ss", server: "gz.xn--1lqrb57uoq8a.com", port: 14779, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
-  - {name: "专线-Frontend-3", type: "ss", server: "gz.xn--1lqrb57uoq8a.com19770", port: 40779, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
+  - {name: "专线-Frontend-3", type: "ss", server: "gz.xn--1lqrb57uoq8a.com", port: 19770, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
   - {name: "专线-Frontend-4", type: "vmess", server: "tongyu.lt1122.com", port: 19333, uuid: "906e4d3f-3185-4c23-8464-23cee0da33c3", alterId: 0, cipher: "auto", network: "tcp"}
 
   - {name: "尼日利亚01", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4442-orderid-11079-region-ng-sessionID-cnq-sessiontime-15", password: "Aa11223344", udp: true}

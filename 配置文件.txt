@@ -42,20 +42,20 @@ rules:
   - DOMAIN,payments.google.com,消费
   - DOMAIN-SUFFIX,payments-pa.googleapis.com,消费
   - DOMAIN,play-fe.googleapis.com,消费
-  - DOMAIN-SUFFIX,gvt1.com,主线路
+  - DOMAIN-SUFFIX,gvt1.com,DIRECT
 
   # 针对Google相关服务的规则
-  - DOMAIN,myaccount.google.com,主线路
-  - DOMAIN-KEYWORD,accounts.google.com,主线路
-  - DOMAIN-SUFFIX,google.com,主线路
-  - DOMAIN-SUFFIX,googleapis.com,主线路
-  - DOMAIN-SUFFIX,gstatic.com,主线路
-  - DOMAIN-SUFFIX,ggpht.com,主线路
-  - DOMAIN-SUFFIX,android.com,主线路
-  - DOMAIN-KEYWORD,google,主线路
-  - DOMAIN-KEYWORD,gmail,主线路
-  - DOMAIN-KEYWORD,youtube,主线路
-  - DOMAIN-KEYWORD,googlevideo.com,主线路
+  - DOMAIN,myaccount.google.com,DIRECT
+  - DOMAIN-KEYWORD,accounts.google.com,DIRECT
+  - DOMAIN-SUFFIX,google.com,DIRECT
+  - DOMAIN-SUFFIX,googleapis.com,DIRECT
+  - DOMAIN-SUFFIX,gstatic.com,DIRECT
+  - DOMAIN-SUFFIX,ggpht.com,DIRECT
+  - DOMAIN-SUFFIX,android.com,DIRECT
+  - DOMAIN-KEYWORD,google,DIRECT
+  - DOMAIN-KEYWORD,gmail,DIRECT
+  - DOMAIN-KEYWORD,youtube,DIRECT
+  - DOMAIN-KEYWORD,googlevideo.com,DIRECT
   - DOMAIN,mtalk.google.com,DIRECT
   - DOMAIN,alt1-mtalk.google.com,DIRECT
   - DOMAIN,alt2-mtalk.google.com,DIRECT
@@ -68,19 +68,19 @@ rules:
   - DOMAIN,alt9-mtalk.google.com,DIRECT
 
   # 针对其他服务的规则
-  - DOMAIN-KEYWORD,game,主线路
-  - DOMAIN-SUFFIX,ipapi.co,主线路
-  - DOMAIN-SUFFIX,ip-api.com,主线路
-  - DOMAIN-SUFFIX,api.ip.sb,主线路
-  - DOMAIN-SUFFIX,IPInfo.io,主线路
-  - DOMAIN-SUFFIX,ipip.net,主线路
-  - DOMAIN-SUFFIX,skk.moe,主线路
-  - DOMAIN-KEYWORD,github,主线路
-  - DOMAIN-SUFFIX,github.com,主线路
-  - DOMAIN-SUFFIX,flowercloud.net,主线路
-  - DOMAIN-SUFFIX,socloud.me,主线路
-  - DOMAIN-SUFFIX,ytoo.asia,主线路
-  - DOMAIN-SUFFIX,ytoo.co.uk,主线路
+  - DOMAIN-KEYWORD,game,DIRECT
+  - DOMAIN-SUFFIX,ipapi.co,DIRECT
+  - DOMAIN-SUFFIX,ip-api.com,DIRECT
+  - DOMAIN-SUFFIX,api.ip.sb,DIRECT
+  - DOMAIN-SUFFIX,IPInfo.io,DIRECT
+  - DOMAIN-SUFFIX,ipip.net,DIRECT
+  - DOMAIN-SUFFIX,skk.moe,DIRECT
+  - DOMAIN-KEYWORD,github,DIRECT
+  - DOMAIN-SUFFIX,github.com,DIRECT
+  - DOMAIN-SUFFIX,flowercloud.net,DIRECT
+  - DOMAIN-SUFFIX,socloud.me,DIRECT
+  - DOMAIN-SUFFIX,ytoo.asia,DIRECT
+  - DOMAIN-SUFFIX,ytoo.co.uk,DIRECT
 
   # 直接访问的规则
   - DOMAIN-SUFFIX,1password.com,DIRECT
@@ -110,6 +110,6 @@ rules:
 
   # 其他匹配规则
   - GEOIP,CN,DIRECT
-  - MATCH,主线路
+  - MATCH,DIRECT
 
 

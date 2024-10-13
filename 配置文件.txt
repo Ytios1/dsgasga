@@ -35,7 +35,7 @@ proxies:
   - {name: "哥伦比亚12", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4442-orderid-10316-region-co_antioquia_medellin-sessionID-6EaFp-sessiontime-15", password: "0QnkJq", udp: true}
 
 proxy-providers:
-  主线路: {type: "http", url: "https://s.youyun666.site/link/kfDrlj3UqJiFbIAx?clash=1", interval: 86400, path: "./proxy_provider/jc.yaml", udp: false, health-check: {enable: true, interval: 600, url: "http://www.gstatic.com/generate_204"}}
+  主线路: {type: "http", url: "https://s.youyun666.site/link/mBWc244ntYw4r2S2?clash=1", interval: 86400, path: "./proxy_provider/jc.yaml", udp: false, health-check: {enable: true, interval: 600, url: "http://www.gstatic.com/generate_204"}}
 
 proxy-groups:
   - {name: "主线路", type: "select", use: ["主线路"], health-check: {enable: true, interval: 120, url: "http://www.gstatic.com/generate_204"}}

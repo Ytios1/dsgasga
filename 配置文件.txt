@@ -17,12 +17,10 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {name: "专线-Frontend", type: "ss", server: "gaosu.laotiehj6.top", port: 19770, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
-  - {name: "专线-Frontend-1", type: "ss", server: "gaosu.laotiehj6.top", port: 42336, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
-  - {name: "专线-Frontend-2", type: "ss", server: "gaosu.laotiehj6.top", port: 21642, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
-  - {name: "专线-Frontend-3", type: "ss", server: "gaosu.laotiehj6.top", port: 40779, cipher: "aes-128-gcm", password: "906e4d3f-3185-4c23-8464-23cee0da33c3", udp: true}
-
-
+  - {name: "专线-Frontend", "type":"vmess","server":"yyhkv2r1.cdn.node.a.ddnsdlmy.xyz","port":20313,"uuid":"6c1792f7-a84c-3871-a50c-7408694e25e9","alterId":0,"cipher":"auto","udp":true,"tags":"hk","network":"ws","ws-opts":{"path":"/acaaaad0-54f5-4e10-94bb-1e6ab04649e1.y.live02.m3u8"},"skip-cert-verify":false}
+  - {name: "专线-Frontend-1", "type":"vmess","server":"78gb1.cdn.node.a.ddnsdlmy.xyz","port":20436,"uuid":"6c1792f7-a84c-3871-a50c-7408694e25e9","alterId":0,"cipher":"auto","udp":true,"tags":"tw","network":"ws","ws-opts":{"path":"/acaaaad0-54f5-4e10-94bb-1e6ab04649e1.y.live02.m3u8"},"skip-cert-verify":false}
+  - {name: "专线-Frontend-2", "type":"vmess","server":"yjpas1.cdn.node.a.ddnsdlmy.xyz","port":20516,"uuid":"6c1792f7-a84c-3871-a50c-7408694e25e9","alterId":0,"cipher":"auto","udp":true,"tags":"jp","network":"ws","ws-opts":{"path":"/acaaaad0-54f5-4e10-94bb-1e6ab04649e1.y.live02.m3u8"},"skip-cert-verify":false}
+  - {name: "专线-Frontend-3", "type":"vmess","server":"ap15ad.cdn.node.a.ddnsdlmy.xyz","port":20649,"uuid":"6c1792f7-a84c-3871-a50c-7408694e25e9","alterId":0,"cipher":"auto","udp":true,"tags":"sg","network":"ws","ws-opts":{"path":"/009c250b-54f5-43a8-8b18-dccbb5d8c66a.y.live01.m3u8"},"skip-cert-verify":false}
   - {name: "哥伦比亚01", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4442-orderid-10316-region-co_antioquia_medellin-sessionID-tMD-sessiontime-15", password: "0QnkJq", udp: true}
   - {name: "哥伦比亚02", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4442-orderid-10316-region-co_antioquia_medellin-sessionID-zGHH7i-sessiontime-15", password: "0QnkJq", udp: true}
   - {name: "哥伦比亚03", type: "socks5", server: "asdata.lumidaili.com", port: "10000", username: "userID-4442-orderid-10316-region-co_antioquia_medellin-sessionID-XF-sessiontime-15", password: "0QnkJq", udp: true}

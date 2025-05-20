@@ -59,6 +59,19 @@ proxy-groups:
   - {name: "专线-土耳其10", type: "relay", proxies: ["自动切换", "土耳其10"]}
   - {name: "专线-土耳其11", type: "relay", proxies: ["自动切换", "土耳其11"]}
   - {name: "专线-土耳其12", type: "relay", proxies: ["自动切换", "土耳其12"]}
+
+    proxy-chain: 自动切换
+
+  - name: Proxies
+    type: select
+    proxies:
+      - 专线-Frontend
+      - 专线-Frontend-1
+      - 专线-Frontend-2
+      - 专线-Frontend-3
+
+    use:
+      - 机场
 rules:
   - DOMAIN-SUFFIX,ipapi.co,Googleplay
   - DOMAIN-SUFFIX,ip-api.com,Googleplay

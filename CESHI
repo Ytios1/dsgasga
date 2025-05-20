@@ -35,7 +35,7 @@ proxies:
 proxy-providers:
   机场:
     type: http
-    url: https://xiaobajie.eyedoll.site/api/v1/client/subscribe?token=f3fa43f34b45f0f4d38eb4d4ba424687
+    url: https://s.youyun666.site/link/YgF79lGEZ6HuZzKN?clash=1
     interval: 86400
     path: ./proxy_provider/jc.yaml
     udp: false

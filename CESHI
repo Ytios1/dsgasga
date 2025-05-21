@@ -50,6 +50,23 @@ proxy-groups:
     use:
       - 机场
 
+  - name: 🇭🇰香港自动选择
+    type: url-test
+    use:
+      - 机场
+    filter: 'HK|香港'
+
+  - name: 🇯🇵日本自动选择
+    type: url-test
+    use:
+      - 机场
+    filter: 'JP|日本'
+
+  - name: 故障转移
+    type: fallback
+    use:
+      - 机场
+
   - name: Googleplay
     type: select
     proxies:

@@ -35,7 +35,7 @@ proxies:
 proxy-providers:
   机场:
     type: http
-    url: https://subconverter.pages.dev/sub?target=clash&url=https%3A%2F%2Fs.youyun666.site%2Flink%2FYgF79lGEZ6HuZzKN%3Fclash%3D1&insert=true&list=false&udp=true
+    url: https://s.youyun666.site/link/T32Tua4I7klQY835?clash=1
     interval: 86400
     path: ./proxy_provider/jc.yaml
     udp: false

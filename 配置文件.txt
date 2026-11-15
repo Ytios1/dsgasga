@@ -301,7 +301,8 @@ proxy-groups:
       - "专线-Frontend-2"
       - "专线-Frontend-3"
 
-  - name: "GooglePlay"
+proxy-groups:
+  - name: Googleplay
     type: select
     proxies:
       - "土耳其01"

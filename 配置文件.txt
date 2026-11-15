@@ -14,7 +14,7 @@ dns:
     - 8.8.4.4
     - tls://1.0.0.1:853
     - tls://dns.google:853
-proxies:
+主线路:
   - name: "专线-Frontend"
     type: vless
     server: bbpd.leen-ttadk.ppsgldass.com
@@ -273,7 +273,7 @@ proxies:
     udp: true
 
 proxy-providers:
-  Proxies:
+  主线路:
     type: http
     url: "https://hm.zmglqtdbkr.com/jiqun/3d63013dfcd7ac3198e6fd402490f848"
     interval: 86400
@@ -283,9 +283,9 @@ proxy-providers:
       url: "http://www.gstatic.com/generate_204"
 
 proxy-groups:
-  - name: "Proxies"
+  - name: "主线路"
     type: select
-    use: ["Proxies"]
+    use: ["主线路"]
     health-check:
       enable: true
       interval: 120
@@ -295,15 +295,15 @@ proxy-groups:
     type: fallback
     url: "http://www.gstatic.com/generate_204"
     interval: 60
-    proxies:
+    Proxies:
       - "专线-Frontend"
       - "专线-Frontend-1"
       - "专线-Frontend-2"
       - "专线-Frontend-3"
 
- - name: "GooglePlay"
+  - name: "GooglePlay"
     type: select
-    proxies:
+    Proxies:
       - "土耳其01"
       - "土耳其02"
       - "土耳其03"
@@ -326,7 +326,6 @@ proxy-groups:
       - "土耳其20"
       - "土耳其21"
       - "土耳其22"
-
 rules:
   - DOMAIN-SUFFIX,ipapi.co,Googleplay
   - DOMAIN-SUFFIX,ip-api.com,Googleplay
@@ -334,9 +333,9 @@ rules:
   - DOMAIN-SUFFIX,IPInfo.io,Googleplay
   - DOMAIN-SUFFIX,ipip.net,Googleplay
   - DOMAIN-SUFFIX,skk.moe,Googleplay
-  - DOMAIN-KEYWORD,game,Proxies
-  - DOMAIN-KEYWORD,gvt1,Proxies
-  - DOMAIN-KEYWORD,googlevideo.com,Proxies
+  - DOMAIN-KEYWORD,game,主线路
+  - DOMAIN-KEYWORD,gvt1,主线路
+  - DOMAIN-KEYWORD,googlevideo.com,主线路
   - DOMAIN-KEYWORD,lra8j.com,DIRECT
   - DOMAIN-KEYWORD,cn,DIRECT
   - DOMAIN,play-fe.googleapis.com,Googleplay
@@ -381,18 +380,18 @@ rules:
   - DOMAIN,time-ios.apple.com,DIRECT
   - DOMAIN-SUFFIX,gateway.push-apple.com.akadns.net,DIRECT
   - DOMAIN-SUFFIX,push.apple.com,DIRECT
-  - DOMAIN-KEYWORD,github,Proxies
-  - DOMAIN-SUFFIX,github.com,Proxies
-  - DOMAIN-SUFFIX,github.io,Proxies
-  - DOMAIN-SUFFIX,githubapp.com,Proxies
-  - DOMAIN-SUFFIX,githubassets.com,Proxies
-  - DOMAIN-SUFFIX,githubusercontent.com,Proxies
-  - DOMAIN-SUFFIX,home-intl.console.aliyun.com,Proxies
-  - DOMAIN-SUFFIX,googleapis.cn,Proxies
-  - DOMAIN-SUFFIX,maying.co,Proxies
-  - DOMAIN-SUFFIX,flowercloud.net,Proxies
-  - DOMAIN-SUFFIX,socloud.me,Proxies
-  - DOMAIN-SUFFIX,ytoo.asia,Proxies
-  - DOMAIN-SUFFIX,ytoo.co.uk,Proxies
+  - DOMAIN-KEYWORD,github,主线路
+  - DOMAIN-SUFFIX,github.com,主线路
+  - DOMAIN-SUFFIX,github.io,主线路
+  - DOMAIN-SUFFIX,githubapp.com,主线路
+  - DOMAIN-SUFFIX,githubassets.com,主线路
+  - DOMAIN-SUFFIX,githubusercontent.com,主线路
+  - DOMAIN-SUFFIX,home-intl.console.aliyun.com,主线路
+  - DOMAIN-SUFFIX,googleapis.cn,主线路
+  - DOMAIN-SUFFIX,maying.co,主线路
+  - DOMAIN-SUFFIX,flowercloud.net,主线路
+  - DOMAIN-SUFFIX,socloud.me,主线路
+  - DOMAIN-SUFFIX,ytoo.asia,主线路
+  - DOMAIN-SUFFIX,ytoo.co.uk,主线路
   - GEOIP,CN,DIRECT
-  - MATCH,Proxies
+  - MATCH,主线路

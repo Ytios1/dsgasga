@@ -219,21 +219,21 @@ proxies:
     type: socks5
     server: global.miyaip.online
     port: 1111
-    username: "1l7w3hehhrvgvmobmiyaip_g-TR_f-1005_sid-17818490537332_l-30"
+    username: "1l7w3hehhrvgvmobmiyaip_g-TR_f-1005_sid-674966_l-30"
     password: "197836245"
     udp: true
   - name: "土耳其16"
     type: socks5
     server: global.miyaip.online
     port: 1111
-    username: "1l7w3hehhrvgvmobmiyaip_g-TR_f-1005_sid-17818490537333_l-30"
+    username: "1l7w3hehhrvgvmobmiyaip_g-TR_f-1005_sid-66205505_l-30"
     password: "197836245"
     udp: true
   - name: "土耳其17"
     type: socks5
     server: global.miyaip.online
     port: 1111
-    username: "1l7w3hehhrvgvmobmiyaip_g-TR_f-1005_sid-17818490537334_l-30"
+    username: "1l7w3hehhrvgvmobmiyaip_g-TR_f-1005_sid-50702168_l-30"
     password: "197836245"
     udp: true
   - name: "土耳其18"

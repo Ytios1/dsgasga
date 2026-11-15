@@ -1,1 +1,398 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+proxies:
+  - name: "专线-Frontend"
+    type: vless
+    server: bbpd.leen-ttadk.ppsgldass.com
+    port: 30006
+    uuid: b73b7874-210c-4a83-9fb3-756aaaa1f184
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: deltaforce.garena.com
+    reality-opts:
+      public-key: fjKWe2xqMm0eBqcYYfHvwjjduSfJYpq9o03cFdE4Lnc
+      short-id: 9d10ab5a6f4ddc
+    client-fingerprint: chrome
+    network: tcp
 
+  - name: "专线-Frontend-1"
+    type: vless
+    server: lass.sppe-asdd.ppsgldass.com
+    port: 31002
+    uuid: b73b7874-210c-4a83-9fb3-756aaaa1f184
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: hsbc.com.hk
+    reality-opts:
+      public-key: mKDsQZV8fmS0EEzK3byvRYnC6WpdOVBElj6tgl5lODU
+      short-id: 943212f19b
+    client-fingerprint: chrome
+    network: tcp
+
+  - name: "专线-Frontend-2"
+    type: vless
+    server: lass.sppe-asdd.ppsgldass.com
+    port: 31013
+    uuid: b73b7874-210c-4a83-9fb3-756aaaa1f184
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: deltaforce.garena.com
+    reality-opts:
+      public-key: ysWWxtUiUau9B8jdHpmxi0IWfPhpJeH-KvB_rdrGiiY
+      short-id: 89f0566c6071
+    client-fingerprint: chrome
+    network: tcp
+
+  - name: "专线-Frontend-3"
+    type: vless
+    server: lass.sppe-asdd.ppsgldass.com
+    port: 31010
+    uuid: b73b7874-210c-4a83-9fb3-756aaaa1f184
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: deltaforce.garena.com
+    reality-opts:
+      public-key: UiMWSC24L18J3LwpGMtCtkHOVjWr2e1Z6cg95INguis
+      short-id: 65189dc565baca61
+    client-fingerprint: chrome
+    network: tcp
+    
+  # 前12条土耳其节点：走自动切换中转（等价原relay效果）
+  - name: "土耳其01"
+    type: socks5
+    server: usdata.lumidaili.com
+    port: 10000
+    username: "userID-4442-orderid-16658-region-tr-sessionID-QxuuMe-sessiontime-30"
+    password: "Aa12345678"
+    udp: true
+    dialer-proxy: "自动切换"
+
+  - name: "土耳其02"
+    type: socks5
+    server: usdata.lumidaili.com
+    port: 10000
+    username: "userID-4442-orderid-16658-region-tr-sessionID-J-sessiontime-30"
+    password: "Aa12345678"
+    udp: true
+    dialer-proxy: "自动切换"
+
+  - name: "土耳其03"
+    type: socks5
+    server: usdata.lumidaili.com
+    port: 10000
+    username: "userID-4442-orderid-16658-region-tr-sessionID-1E4ph-sessiontime-30"
+    password: "Aa12345678"
+    udp: true
+    dialer-proxy: "自动切换"
+
+  - name: "土耳其04"
+    type: socks5
+    server: usdata.lumidaili.com
+    port: 10000
+    username: "userID-4442-orderid-16658-region-tr-sessionID-IQ0xq-sessiontime-30"
+    password: "Aa12345678"
+    udp: true
+    dialer-proxy: "自动切换"
+
+  - name: "土耳其05"
+    type: socks5
+    server: usdata.lumidaili.com
+    port: 10000
+    username: "userID-4442-orderid-16658-region-tr-sessionID-6c-sessiontime-30"
+    password: "Aa12345678"
+    udp: true
+    dialer-proxy: "自动切换"
+
+  - name: "土耳其06"
+    type: socks5
+    server: usdata.lumidaili.com
+    port: 10000
+    username: "userID-4442-orderid-16658-region-tr-sessionID-aP5B-sessiontime-30"
+    password: "Aa12345678"
+    udp: true
+    dialer-proxy: "自动切换"
+
+  - name: "土耳其07"
+    type: socks5
+    server: usdata.lumidaili.com
+    port: 10000
+    username: "userID-4442-orderid-16658-region-tr-sessionID-Y-sessiontime-30"
+    password: "Aa12345678"
+    udp: true
+    dialer-proxy: "自动切换"
+
+  - name: "土耳其08"
+    type: socks5
+    server: usdata.lumidaili.com
+    port: 10000
+    username: "userID-4442-orderid-16658-region-tr-sessionID-TL59-sessiontime-30"
+    password: "Aa12345678"
+    udp: true
+    dialer-proxy: "自动切换"
+
+  - name: "土耳其09"
+    type: socks5
+    server: usdata.lumidaili.com
+    port: 10000
+    username: "userID-4442-orderid-16658-region-tr-sessionID-2XSp-sessiontime-30"
+    password: "Aa12345678"
+    udp: true
+    dialer-proxy: "自动切换"
+
+  - name: "土耳其10"
+    type: socks5
+    server: usdata.lumidaili.com
+    port: 10000
+    username: "userID-4442-orderid-16658-region-tr-sessionID-eFfPy-sessiontime-30"
+    password: "Aa12345678"
+    udp: true
+    dialer-proxy: "自动切换"
+
+  - name: "土耳其11"
+    type: socks5
+    server: usdata.lumidaili.com
+    port: 10000
+    username: "userID-4442-orderid-16658-region-tr-sessionID-0xI-sessiontime-30"
+    password: "Aa12345678"
+    udp: true
+    dialer-proxy: "自动切换"
+
+  - name: "土耳其12"
+    type: socks5
+    server: usdata.lumidaili.com
+    port: 10000
+    username: "userID-4442-orderid-16658-region-tr-sessionID-lAe-sessiontime-30"
+    password: "Aa12345678"
+    udp: true
+    dialer-proxy: "自动切换"
+
+  # 后10条土耳其节点：直连，无中转
+  - name: "土耳其13"
+    type: socks5
+    server: global.miyaip.online
+    port: 1111
+    username: "1l7w3hehhrvgvmobmiyaip_g-TR_f-1005_sid-17818490537330_l-30"
+    password: "197836245"
+    udp: true
+  - name: "土耳其14"
+    type: socks5
+    server: global.miyaip.online
+    port: 1111
+    username: "1l7w3hehhrvgvmobmiyaip_g-TR_f-1005_sid-17818490537331_l-30"
+    password: "197836245"
+    udp: true
+  - name: "土耳其15"
+    type: socks5
+    server: global.miyaip.online
+    port: 1111
+    username: "1l7w3hehhrvgvmobmiyaip_g-TR_f-1005_sid-17818490537332_l-30"
+    password: "197836245"
+    udp: true
+  - name: "土耳其16"
+    type: socks5
+    server: global.miyaip.online
+    port: 1111
+    username: "1l7w3hehhrvgvmobmiyaip_g-TR_f-1005_sid-17818490537333_l-30"
+    password: "197836245"
+    udp: true
+  - name: "土耳其17"
+    type: socks5
+    server: global.miyaip.online
+    port: 1111
+    username: "1l7w3hehhrvgvmobmiyaip_g-TR_f-1005_sid-17818490537334_l-30"
+    password: "197836245"
+    udp: true
+  - name: "土耳其18"
+    type: socks5
+    server: global.miyaip.online
+    port: 1111
+    username: "1l7w3hehhrvgvmiyaip_g-TR_f-1001_sid-98748665_l-30"
+    password: "157632896"
+    udp: true
+  - name: "土耳其19"
+    type: socks5
+    server: global.miyaip.online
+    port: 1111
+    username: "1l7w3hehhrvgvmiyaip_g-TR_f-1001_sid-70542904_l-30"
+    password: "157632896"
+    udp: true
+  - name: "土耳其20"
+    type: socks5
+    server: global.miyaip.online
+    port: 1111
+    username: "1l7w3hehhrvgvmiyaip_g-TR_f-1001_sid-86904539_l-30"
+    password: "157632896"
+    udp: true
+  - name: "土耳其21"
+    type: socks5
+    server: global.miyaip.online
+    port: 1111
+    username: "1l7w3hehhrvgvmiyaip_g-TR_f-1001_sid-151466_l-30"
+    password: "157632896"
+    udp: true
+  - name: "土耳其22"
+    type: socks5
+    server: global.miyaip.online
+    port: 1111
+    username: "1l7w3hehhrvgvmiyaip_g-TR_f-1001_sid-438192_l-30"
+    password: "157632896"
+    udp: true
+
+proxy-providers:
+  Proxies:
+    type: http
+    url: "https://hm.zmglqtdbkr.com/jiqun/3d63013dfcd7ac3198e6fd402490f848"
+    interval: 86400
+    health-check:
+      enable: true
+      interval: 600
+      url: "http://www.gstatic.com/generate_204"
+
+proxy-groups:
+  - name: "Proxies"
+    type: select
+    use: ["Proxies"]
+    health-check:
+      enable: true
+      interval: 120
+      url: "http://www.gstatic.com/generate_204"
+
+  - name: "自动切换"
+    type: fallback
+    url: "http://www.gstatic.com/generate_204"
+    interval: 60
+    proxies:
+      - "专线-Frontend"
+      - "专线-Frontend-1"
+      - "专线-Frontend-2"
+      - "专线-Frontend-3"
+
+  - name: "GooglePlay"
+    type: select
+    proxies:
+      - "土耳其01"
+      - "土耳其02"
+      - "土耳其03"
+      - "土耳其04"
+      - "土耳其05"
+      - "土耳其06"
+      - "土耳其07"
+      - "土耳其08"
+      - "土耳其09"
+      - "土耳其10"
+      - "土耳其11"
+      - "土耳其12"
+      - "土耳其13"
+      - "土耳其14"
+      - "土耳其15"
+      - "土耳其16"
+      - "土耳其17"
+      - "土耳其18"
+      - "土耳其19"
+      - "土耳其20"
+      - "土耳其21"
+      - "土耳其22"
+
+rules:
+  - DOMAIN-SUFFIX,ipapi.co,Googleplay
+  - DOMAIN-SUFFIX,ip-api.com,Googleplay
+  - DOMAIN-SUFFIX,api.ip.sb,Googleplay
+  - DOMAIN-SUFFIX,IPInfo.io,Googleplay
+  - DOMAIN-SUFFIX,ipip.net,Googleplay
+  - DOMAIN-SUFFIX,skk.moe,Googleplay
+  - DOMAIN-KEYWORD,game,Proxies
+  - DOMAIN-KEYWORD,gvt1,Proxies
+  - DOMAIN-KEYWORD,googlevideo.com,Proxies
+  - DOMAIN-KEYWORD,lra8j.com,DIRECT
+  - DOMAIN-KEYWORD,cn,DIRECT
+  - DOMAIN,play-fe.googleapis.com,Googleplay
+  - DOMAIN,play.googleapis.com,Googleplay
+  - DOMAIN,myaccount.google.com,Googleplay
+  - DOMAIN-KEYWORD,accounts.google.com,Googleplay
+  - DOMAIN,play-fe.googleapis.com,Googleplay
+  - DOMAIN,sspanel.net,Googleplay
+  - DOMAIN,payments-pa.googleapis.com,Googleplay
+  - DOMAIN-KEYWORD,orders-dra.iap.cloud.huawei,Googleplay
+  - DOMAIN-SUFFIX,acs.cupdapp.cn,Googleplay
+  - DOMAIN-KEYWORD,iap-pay-dra.cloud.huawei,Googleplay
+  - IP-CIDR,172.217.160.110/32,Googleplay
+  - IP-CIDR,172.217.163.46/32,Googleplay
+  - IP-CIDR,172.217.160.78/32,Googleplay
+  - IP-CIDR,142.251.42.238/32,Googleplay
+  - IP-CIDR,142.251.43.14/32,Googleplay
+  - IP-CIDR,142.251.220.77/32,Googleplay
+  - IP-CIDR,142.251.42.237/32,Googleplay
+  - IP-CIDR,172.217.163.45/32,Googleplay
+  - IP-CIDR,142.250.204.78/32,Googleplay
+  - IP-CIDR,142.250.66.142/32,Googleplay
+  - DOMAIN-SUFFIX,1password.com,DIRECT
+  - DOMAIN-SUFFIX,vultr.com,DIRECT
+  - DOMAIN-SUFFIX,mb3admin.com,DIRECT
+  - DOMAIN-SUFFIX,rixcloud.io,DIRECT
+  - DOMAIN-SUFFIX,tempestapp.io,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,baidu-int.com,DIRECT
+  - DOMAIN-SUFFIX,erebor.douban.com,DIRECT
+  - DOMAIN,mtalk.google.com,DIRECT
+  - DOMAIN,alt1-mtalk.google.com,DIRECT
+  - DOMAIN,alt2-mtalk.google.com,DIRECT
+  - DOMAIN,alt3-mtalk.google.com,DIRECT
+  - DOMAIN,alt4-mtalk.google.com,DIRECT
+  - DOMAIN,alt5-mtalk.google.com,DIRECT
+  - DOMAIN,alt6-mtalk.google.com,DIRECT
+  - DOMAIN,alt7-mtalk.google.com,DIRECT
+  - DOMAIN,alt8-mtalk.google.com,DIRECT
+  - DOMAIN,alt9-mtalk.google.com,DIRECT
+  - DOMAIN,captive.apple.com,DIRECT
+  - DOMAIN,time-ios.apple.com,DIRECT
+  - DOMAIN-SUFFIX,gateway.push-apple.com.akadns.net,DIRECT
+  - DOMAIN-SUFFIX,push.apple.com,DIRECT
+  - DOMAIN-KEYWORD,github,Proxies
+  - DOMAIN-SUFFIX,github.com,Proxies
+  - DOMAIN-SUFFIX,github.io,Proxies
+  - DOMAIN-SUFFIX,githubapp.com,Proxies
+  - DOMAIN-SUFFIX,githubassets.com,Proxies
+  - DOMAIN-SUFFIX,githubusercontent.com,Proxies
+  - DOMAIN-SUFFIX,home-intl.console.aliyun.com,Proxies
+  - DOMAIN-SUFFIX,googleapis.cn,Proxies
+  - DOMAIN-SUFFIX,maying.co,Proxies
+  - DOMAIN-SUFFIX,flowercloud.net,Proxies
+  - DOMAIN-SUFFIX,socloud.me,Proxies
+  - DOMAIN-SUFFIX,ytoo.asia,Proxies
+  - DOMAIN-SUFFIX,ytoo.co.uk,Proxies
+  - GEOIP,CN,DIRECT
+  - MATCH,Proxies

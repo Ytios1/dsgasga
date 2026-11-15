@@ -14,7 +14,7 @@ dns:
     - 8.8.4.4
     - tls://1.0.0.1:853
     - tls://dns.google:853
-Proxies:
+proxies:
   - name: "专线-Frontend"
     type: vless
     server: bbpd.leen-ttadk.ppsgldass.com
@@ -273,7 +273,7 @@ Proxies:
     udp: true
 
 proxy-providers:
-  Proxies:
+  主线路:
     type: http
     url: "https://hm.zmglqtdbkr.com/jiqun/3d63013dfcd7ac3198e6fd402490f848"
     interval: 86400
@@ -295,7 +295,7 @@ proxy-groups:
     type: fallback
     url: "http://www.gstatic.com/generate_204"
     interval: 60
-    Proxies:
+    proxies:
       - "专线-Frontend"
       - "专线-Frontend-1"
       - "专线-Frontend-2"
@@ -303,29 +303,29 @@ proxy-groups:
 
   - name: "GooglePlay"
     type: select
-    Proxies:
-      - 土耳其01
-      - 土耳其02
-      - 土耳其03
-      - 土耳其04
-      - 土耳其05
-      - 土耳其06
-      - 土耳其07
-      - 土耳其08
-      - 土耳其09
-      - 土耳其10
-      - 土耳其11
-      - 土耳其12
-      - 土耳其13
-      - 土耳其14
-      - 土耳其15
-      - 土耳其16
-      - 土耳其17
-      - 土耳其18
-      - 土耳其19
-      - 土耳其20
-      - 土耳其21
-      - 土耳其22
+    proxies:
+      - "土耳其01"
+      - "土耳其02"
+      - "土耳其03"
+      - "土耳其04"
+      - "土耳其05"
+      - "土耳其06"
+      - "土耳其07"
+      - "土耳其08"
+      - "土耳其09"
+      - "土耳其10"
+      - "土耳其11"
+      - "土耳其12"
+      - "土耳其13"
+      - "土耳其14"
+      - "土耳其15"
+      - "土耳其16"
+      - "土耳其17"
+      - "土耳其18"
+      - "土耳其19"
+      - "土耳其20"
+      - "土耳其21"
+      - "土耳其22"
 rules:
   - DOMAIN-SUFFIX,ipapi.co,Googleplay
   - DOMAIN-SUFFIX,ip-api.com,Googleplay
